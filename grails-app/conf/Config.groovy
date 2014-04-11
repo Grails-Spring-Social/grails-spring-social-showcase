@@ -116,7 +116,7 @@ log4j = {
     'org.codehaus.groovy.grails.web.mapping',        // URL mapping
     'org.codehaus.groovy.grails.commons'            // core / classloading
 
-  debug 'org.codehaus.groovy.grails.plugins'            // plugins
+  error 'org.codehaus.groovy.grails.plugins'            // plugins
 
 
   warn 'org.codehaus.groovy.grails.orm.hibernate',      // hibernate integration

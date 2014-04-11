@@ -1,3 +1,25 @@
+import grails.util.Environment
+
+final springSocialPluginsVersionSuffix
+
+switch(Environment.current.name.toLowerCase()) {
+
+    case ["staging", "test-jenkins"]:
+        springSocialPluginsVersionSuffix = '-SNAPSHOT'
+        break
+
+    case ["test","development"]:
+        springSocialPluginsVersionSuffix = '-SNAPSHOT'
+        grails.plugin.location.'springsocial-facebook' = '../grails-spring-social-facebook/'
+        grails.plugin.location.'spring-social-core' = '../grails-spring-social-core/'
+
+        break
+
+    default:
+        springSocialPluginsVersionSuffix = ''
+        break
+
+}
 grails.servlet.version = "3.0" // Change depending on target container compliance (2.5 or 3.0)
 grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
@@ -64,9 +86,9 @@ grails.project.dependency.resolution = {
 
   plugins {
     //spring social
-    compile(":spring-social-core:0.2.0.BUILD-SNAPSHOT")
+    compile(":spring-social-core:0.2.0.BUILD$springSocialPluginsVersionSuffix")
     //compile(":spring-social-twitter:0.1.31")
-    compile(":springsocial-facebook:0.1.34-SNAPSHOT")
+    compile(":springsocial-facebook:0.1.34$springSocialPluginsVersionSuffix")
     // plugins for the build system only
     build ":tomcat:7.0.52.1"
 
