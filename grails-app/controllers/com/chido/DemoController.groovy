@@ -2,13 +2,13 @@ package com.chido
 
 class DemoController {
 
-  def index = { }
+  def index() {}
   
-  def fb = {
+  def  fb() {
     render view: 'facebook'
   }
   
-  def tw = {
+  def tw(){
     render view: 'twitter'
   }
 }
