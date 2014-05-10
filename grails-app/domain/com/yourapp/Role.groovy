@@ -1,4 +1,4 @@
-package com.synergyj.grails.plugins.springsocial.showcase
+package com.yourapp
 
 class Role {
 

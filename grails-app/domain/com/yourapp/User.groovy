@@ -1,4 +1,4 @@
-package com.synergyj.grails.plugins.springsocial.showcase
+package com.yourapp
 
 class User {
 
@@ -7,9 +7,11 @@ class User {
 	String username
 	String password
 	boolean enabled = true
-	boolean accountExpired = false
-	boolean accountLocked = false
-	boolean passwordExpired = false
+	boolean accountExpired
+	boolean accountLocked
+	boolean passwordExpired
+
+	static transients = ['springSecurityService']
 
 	static constraints = {
 		username blank: false, unique: true

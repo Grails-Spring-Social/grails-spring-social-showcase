@@ -12,4 +12,8 @@ target/
 .settings/
 devDB.log
 devDB.properties
-devDB.script
+devDB.scriptout
+devDb.h2.db
+devDb.lock.db
+devDb.trace.db
+*.class
