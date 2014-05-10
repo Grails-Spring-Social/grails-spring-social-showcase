@@ -11,7 +11,7 @@
   <div class="row">
     <div class="span9">
 
-      <form class="form-signin" role="form" action='${postUrl}' method='POST' id='loginForm' autocomplete='off'>
+      <form class="form-container" role="form" action='${postUrl}' method='POST' id='loginForm' autocomplete='off'>
 
         <h2>
           <g:message code="springSecurity.login.header"/>
