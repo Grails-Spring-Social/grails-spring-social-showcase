@@ -11,6 +11,7 @@ switch(Environment.current.name.toLowerCase()) {
     case ["test","development"]:
         springSocialPluginsVersionSuffix = '-SNAPSHOT'
         grails.plugin.location.'springsocial-facebook' = '../grails-spring-social-facebook/'
+        grails.plugin.location.'spring-social-twitter' = '../grails-spring-social-twitter/'
         grails.plugin.location.'spring-social-core' = '../grails-spring-social-core/'
 
         break
@@ -87,8 +88,9 @@ grails.project.dependency.resolution = {
   plugins {
     //spring social
     compile(":spring-social-core:0.2.0.BUILD$springSocialPluginsVersionSuffix")
-    //compile(":spring-social-twitter:0.1.31")
+    compile(":spring-social-twitter:0.2.0.BUILD$springSocialPluginsVersionSuffix")
     compile(":springsocial-facebook:0.1.34$springSocialPluginsVersionSuffix")
+
     // plugins for the build system only
     build ":tomcat:7.0.52.1"
 

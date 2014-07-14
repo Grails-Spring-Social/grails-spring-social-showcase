@@ -45,8 +45,8 @@
         <g:form method="POST" mapping="springSocialConnect" params='[providerId: "${providerId}"]'>
           <input type="hidden" name="scope"
                  value="user_hometown,user_interests,user_likes,user_location,email,offline_access,publish_stream,user_birthday"/>
-          <button class="btn btn-primary">Login with Facebook</button>
-          <!--		<button class="FBshare"><img src="${createLinkTo(dir: 'images/springsocial/facebook', file: 'connect_light_medium_short.gif')}"/></button>-->
+          <button class="btn btn-primary">Login with ${providerId.capitalize()}</button>
+          <!--		<button class="FBshare"><img src="${createLinkTo(dir: "images/springsocial/${providerId}", file: 'connect_light_medium_short.gif')}"/></button>-->
         </g:form>
       </g:each>
 

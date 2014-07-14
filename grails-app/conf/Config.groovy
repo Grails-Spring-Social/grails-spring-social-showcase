@@ -155,6 +155,14 @@ log4j = {
 plugin.springsocialFacebook.clientSecret = "73b06ad466e900d07f5555062068b572"
 plugin.springsocialFacebook.clientId = "101918953236251"
 
+//Configuration for facebook
+plugin.springsocialFacebook.clientSecret = "73b06ad466e900d07f5555062068b572"
+plugin.springsocialFacebook.clientId = "101918953236251"
+
+plugin.springsocialTwitter.consumerKey ="2423432"
+plugin.springsocialTwitter.consumerSecret ="42342342344"
+
+
 //Spring social config
 plugin.springSocialCore.pageConnectedHome = "/springSocialFacebook/index"
 plugin.springSocialCore.loginUrl = "/springSocialFacebook/index"
