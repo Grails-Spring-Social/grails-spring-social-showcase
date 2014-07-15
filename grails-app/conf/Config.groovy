@@ -160,6 +160,11 @@ plugin.springsocialTwitter.consumerKey ="consumer key"
 plugin.springsocialTwitter.consumerSecret ="secret"
 
 
+//Configuration for Twitter
+grails.plugins.springsocial.twitter.consumerKey="CONFIGURE_KEY"
+grails.plugins.springsocial.twitter.consumerSecret="CONFIGURE_SECRET"
+
+
 //Spring social config
 plugin.springSocialCore.pageConnectedHome = "/springSocialFacebook/index"
 plugin.springSocialCore.loginUrl = "/springSocialFacebook/index"
@@ -189,3 +194,16 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 
 ]
 
+plugin.springSocialCore.providers.facebook = [
+  'fields': [
+    'scope': 'email,offline_access,publish_stream,user_hometown,user_interests,user_likes,user_location,user_birthday'
+  ]
+]
+
+plugin.springSocialCore.providers.twitter = [
+  'fields': [:]
+]
+
+plugin.springSocialCore.providers.foursquare = [
+  'fields': [:]
+]

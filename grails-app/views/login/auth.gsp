@@ -11,7 +11,7 @@
   <div class="row">
     <div class="span9">
 
-      <form class="form-signin" role="form" action='${postUrl}' method='POST' id='loginForm' autocomplete='off'>
+      <form class="form-container" role="form" action='${postUrl}' method='POST' id='loginForm' autocomplete='off'>
 
         <h2>
           <g:message code="springSecurity.login.header"/>
@@ -36,11 +36,12 @@
                  <g:if test='${hasCookie}'>checked='checked'</g:if>/>
           <label for='remember_me'><g:message code="springSecurity.login.remember.me.label"/></label>
         </div>
-        <button type='submit' class="btn btn-primary"
+        <button type='submit' class="btn btn-primary btn-lg"
                 id="submit">${message(code: "springSecurity.login.button")}</button>
 
       </form>
       <g:set var="connectionFactories" value="${springsocial.registeredProviderIds()}"/>
+<<<<<<< HEAD
       <g:each in="${connectionFactories}" var="providerId">
         <g:form method="POST" mapping="springSocialConnect" params='[providerId: "${providerId}"]'>
           <input type="hidden" name="scope"
@@ -50,6 +51,20 @@
         </g:form>
       </g:each>
 
+=======
+      <g:set var="connectionProviderSettings" value="${grails.util.Holders.getConfig().plugin.springSocialCore.providers}"/>
+      <div class="form-signin-providers">
+        <g:each in="${connectionFactories}" var="providerId">
+          <g:form method="POST" mapping="springSocialConnect" params='[providerId: "${providerId}"]' class="form-inline">
+            <g:each in="${connectionProviderSettings[providerId].fields.keySet()}" var="field">
+              <input type="hidden" name="${field}"
+                     value="${connectionProviderSettings[providerId].fields[field]}"/>
+            </g:each>
+            <button class="btn"><i class="fa fa-${providerId}"></i> Login with ${providerId}</button>
+          </g:form>
+        </g:each>
+      </div>
+>>>>>>> 7f0a3550e4141f6e43b29cd8c596babb48afb39f
     </div>
   </div>
 
