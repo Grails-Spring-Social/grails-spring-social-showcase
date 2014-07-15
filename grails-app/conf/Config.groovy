@@ -153,7 +153,7 @@ log4j = {
 
 //Configuration for facebook
 plugin.springsocialFacebook.clientSecret = "73b06ad466e900d07f5555062068b572"
-plugin.springsocialFacebook.clientId = "101918953236251 "
+plugin.springsocialFacebook.clientId = "101918953236251"
 
 //Configuration for twitter
 plugin.springsocialTwitter.consumerKey ="consumer key"
