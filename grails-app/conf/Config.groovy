@@ -155,6 +155,11 @@ log4j = {
 plugin.springsocialFacebook.clientSecret = "73b06ad466e900d07f5555062068b572"
 plugin.springsocialFacebook.clientId = "101918953236251"
 
+//Configuration for twitter
+plugin.springsocialTwitter.consumerKey ="consumer key"
+plugin.springsocialTwitter.consumerSecret ="secret"
+
+
 //Configuration for Twitter
 grails.plugins.springsocial.twitter.consumerKey="CONFIGURE_KEY"
 grails.plugins.springsocial.twitter.consumerSecret="CONFIGURE_SECRET"
@@ -178,6 +183,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
   '/ssconnect/**'                 : ['permitAll'],
   '/sssignin/**'                  : ['permitAll'],
   '/springSocialFacebook/**'      : ['permitAll'],
+  '/springSocialTwitter/**'       : ['permitAll'],
   '/springSocialConnect/**'       : ['permitAll'],
   '/springSocialProviderSignIn/**': ['permitAll'],
   '/ssconnect/**'                 : ['permitAll'],

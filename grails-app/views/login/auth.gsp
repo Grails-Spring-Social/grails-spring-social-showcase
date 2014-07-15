@@ -41,18 +41,15 @@
 
       </form>
       <g:set var="connectionFactories" value="${springsocial.registeredProviderIds()}"/>
-      <g:set var="connectionProviderSettings" value="${grails.util.Holders.getConfig().plugin.springSocialCore.providers}"/>
-      <div class="form-signin-providers">
-        <g:each in="${connectionFactories}" var="providerId">
-          <g:form method="POST" mapping="springSocialConnect" params='[providerId: "${providerId}"]' class="form-inline">
-            <g:each in="${connectionProviderSettings[providerId].fields.keySet()}" var="field">
-              <input type="hidden" name="${field}"
-                     value="${connectionProviderSettings[providerId].fields[field]}"/>
-            </g:each>
-            <button class="btn"><i class="fa fa-${providerId}"></i> Login with ${providerId}</button>
-          </g:form>
-        </g:each>
-      </div>
+      <g:each in="${connectionFactories}" var="providerId">
+        <g:form method="POST" mapping="springSocialConnect" params='[providerId: "${providerId}"]'>
+          <input type="hidden" name="scope"
+                 value="user_hometown,user_interests,user_likes,user_location,email,offline_access,publish_stream,user_birthday"/>
+          <button class="btn btn-primary">Login with ${providerId.capitalize()}</button>
+          <!--		<button class="FBshare"><img src="${createLinkTo(dir: "images/springsocial/${providerId}", file: 'connect_light_medium_short.gif')}"/></button>-->
+        </g:form>
+      </g:each>
+
     </div>
   </div>
 
