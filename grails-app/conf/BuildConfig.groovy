@@ -90,11 +90,7 @@ grails.project.dependency.resolution = {
     compile(":spring-social-core:0.2.0.BUILD$springSocialPluginsVersionSuffix")
     compile(":spring-social-twitter:0.2.0.BUILD$springSocialPluginsVersionSuffix")
     compile(":springsocial-facebook:0.1.34$springSocialPluginsVersionSuffix")
-<<<<<<< HEAD
 
-=======
-    compile ":spring-social-twitter:0.1.31"
->>>>>>> 7f0a3550e4141f6e43b29cd8c596babb48afb39f
     // plugins for the build system only
     build ":tomcat:7.0.52.1"
 

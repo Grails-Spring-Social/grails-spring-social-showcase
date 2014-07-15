@@ -41,7 +41,6 @@
 
       </form>
       <g:set var="connectionFactories" value="${springsocial.registeredProviderIds()}"/>
-<<<<<<< HEAD
       <g:each in="${connectionFactories}" var="providerId">
         <g:form method="POST" mapping="springSocialConnect" params='[providerId: "${providerId}"]'>
           <input type="hidden" name="scope"
@@ -51,20 +50,6 @@
         </g:form>
       </g:each>
 
-=======
-      <g:set var="connectionProviderSettings" value="${grails.util.Holders.getConfig().plugin.springSocialCore.providers}"/>
-      <div class="form-signin-providers">
-        <g:each in="${connectionFactories}" var="providerId">
-          <g:form method="POST" mapping="springSocialConnect" params='[providerId: "${providerId}"]' class="form-inline">
-            <g:each in="${connectionProviderSettings[providerId].fields.keySet()}" var="field">
-              <input type="hidden" name="${field}"
-                     value="${connectionProviderSettings[providerId].fields[field]}"/>
-            </g:each>
-            <button class="btn"><i class="fa fa-${providerId}"></i> Login with ${providerId}</button>
-          </g:form>
-        </g:each>
-      </div>
->>>>>>> 7f0a3550e4141f6e43b29cd8c596babb48afb39f
     </div>
   </div>
 
